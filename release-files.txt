@@ -1,0 +1,15 @@
+.gitignore
+LICENSE
+README.md
+THIRD_PARTY.md
+appendix.typ
+chapters/conclusion.typ
+chapters/introduction.typ
+chapters/methodology.typ
+config.typ
+main.typ
+references.bib
+release-files.txt
+scripts/requirements.txt
+scripts/validate.py
+template.typ

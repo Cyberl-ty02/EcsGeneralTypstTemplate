@@ -1,0 +1,16 @@
+/build/
+/tmp/
+/temp/
+/.cache/
+/.venv/
+/audit/
+/audits/
+/evaluation/
+/evaulation/
+__pycache__/
+*.pyc
+*.pdf
+*.log
+*.html
+.DS_Store
+Thumbs.db

@@ -1,0 +1,2 @@
+# Optional acceptance tooling only; PDF compilation needs no Python packages.
+pypdf==7.1.1
