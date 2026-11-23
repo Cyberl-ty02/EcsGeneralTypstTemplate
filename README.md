@@ -70,6 +70,37 @@ The template provides title and abstract pages, optional acknowledgements and
 declaration, contents, optional figure/table lists, numbered headings and
 equations, figures, tables, cross-references, references and appendices.
 
+## Template design and a minimal document
+
+The design follows Typst's official
+[Making a Template tutorial](https://typst.app/docs/tutorial/making-a-template/):
+`template.typ` exports a document wrapper, its last positional argument receives
+the body, and an everything show rule applies it to the rest of the manuscript.
+`.with(...)` supplies named arguments without an extra closure. The wrapper's
+local `set` and `show` rules style its content; `config.typ` keeps repeated values
+in one place. The configuration dictionary groups related settings, while
+abstract and optional front matter remain separate content arguments.
+
+A minimal document, saved alongside `template.typ`, is:
+
+```typst
+#import "template.typ": dissertation
+
+#show: dissertation.with(
+  config: (title: "An Illustrative Report", author: "Example Author"),
+  abstract: [A short, fictional example.],
+)
+
+= Introduction
+Write your own content here.
+```
+
+For a full dissertation, start from `main.typ` and edit `config.typ` and the
+chapter files. The template sets PDF metadata from the same configuration used
+on the cover, so title and author values do not need to be entered twice.
+This is a local reusable template; a Typst Universe package manifest is not
+required to use it.
+
 ## Configuration
 
 The `config` dictionary rejects unknown keys. The only required metadata is a
